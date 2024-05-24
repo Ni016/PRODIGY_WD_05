@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.weather-card {
+    background-color: rgba(255, 255, 255, 0.359); 
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 450px;
+    z-index: 3;
+}
+
+.weather-card:hover {
+    transform: scale(1.05);
+}
+
+#city-input {
+    padding: 15px;
+    margin: 10px 0;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#city-input:focus {
+    outline: none;
+    border-color: #2196F3;
+}
+
+#city-input::placeholder {
+    color: #aaa;
+}
+
+#city-input-btn {
+    padding: 10px;
+    background-color: #eea039;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#city-input-btn:hover {
+    background-color: #510ce7;
+}
+
+#weather-info {
+    display: none;
+}
+
+#weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+#city-name {
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+#temperature {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+#description {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#wind-speed {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: auto;
+}
+
+#date {
+    font-size: 20px;
+    color: rgb(29, 110, 233);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-display: auto;
+}
+
+#time{
+    font-size: 10px;
+    color: rgb(238, 16, 16);
+    font-weight: bold;
+    font-display: auto;
+
+}
+
+
+.slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fade 10s infinite;
+}
+
+.slideshow img:nth-child(1) {
+    animation-delay: 11s;
+}
+
+.slideshow img:nth-child(2) {
+    animation-delay: 15s;
+}
+
+.slideshow img:nth-child(3) {
+    animation-delay: 12s;
+}
+
+.slideshow img:nth-child(4){
+    animation-delay: 16s;
+}
+
+@keyframes fade {
+    0% {opacity: 0}
+    25% {opacity: 1;}
+    50% {opacity: 1;}
+    75% {opacity: 0;}
+    100%{ opacity: 0;}
+    
+}
